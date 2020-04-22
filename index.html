@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Tic-Tac-Toe Application</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -11,7 +11,97 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
-    <body>
-      <h1>Browser Template</h1>
-    </body>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <h1 class="display-3 col-12 border bold bg-light">Tic-Tac-Toe Application</h1>
+    </div>
+  </div>
+
+  <div class="alert alert-success" role="alert">
+  A simple success alert—check it out!
+  </div>
+
+  <div class="alert alert-danger" role="alert">
+  A simple danger alert—check it out!
+  </div>
+
+      <div class="container">
+        <div class="row">
+
+<!-- Sign-In Form -->
+          <form id='sign-in '>
+            <h3><small class="text-muted">Sign-In</small></h3>
+            <div class="form-group ">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control " id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-dark">Submit</button>
+            <button type="submit" class="btn btn-dark">Create Account</button>
+          </form>
+
+<!-- Sign-up Form -->
+          <form id='sign-up'>
+            <h3><small class="text-muted">Sign-Up</small></h3>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else. Promise.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Confirm Password</label>
+              <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
+            </div>
+            <button type="submit" class="btn btn-dark">Submit</button>
+          </form>
+        </div>
+      </div>
+      <!-- Create Game button -->
+      <div class="container px-5">
+        <div class="row mx-n5">
+          <div class="col text-center  px-5">
+      <button type="button" class="btn btn-dark btn b-3">Create Game</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sign-Out Button -->
+      <div class="container px-5">
+        <div class="row mx-n5">
+          <div class="col text-center px-5">
+      <button type="button" class="btn btn-outline-dark">Sign-Out</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="container ">
+        <div class="row px-5">
+          <div class="col-4 box ">Player 1 = X</div>
+          <div class="col-4"></div>
+          <div class="col-4 box alt-color">Player 2 = O</div>
+        </div>
+        <div class="row b-3">
+          <div class="col-4 box alt-color"></div>
+          <div class="col-4 box color"></div>
+          <div class="col-4 box alt-color"></div>
+          <div class="col-4 box color"></div>
+          <div class="col-4 box alt-color"></div>
+          <div class="col-4 box color"></div>
+          <div class="col-4 box alt-color"></div>
+          <div class="col-4 box color"></div>
+          <div class="col-4 box alt-color"></div>
+        </div>
+
+
+</body>
 </html>
