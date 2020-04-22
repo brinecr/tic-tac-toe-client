@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Tic-Tac-Toe Application</title>
+      <title>Tic-Tac-Toe Game</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -15,9 +15,10 @@
 <body>
   <div class="container">
     <div class="row">
-      <h1 class="display-3 col-12 border bold bg-light">Tic-Tac-Toe Application</h1>
+      <h2 class="title col-12 bold fixed-top">Tic-Tac-Toe Game</h2>
     </div>
   </div>
+  <h1><a class="topPadding">Pad</a></h1>
 
   <div class="alert alert-success" role="alert">
   A simple success alert—check it out!
@@ -65,6 +66,7 @@
           </form>
         </div>
       </div>
+
       <!-- Create Game button -->
       <div class="container px-5">
         <div class="row mx-n5">
@@ -84,12 +86,15 @@
       </div>
 
 
-      <div class="container ">
+      <div class="container text-center ">
+        <!-- Player 1 or Player 2 notifier -->
         <div class="row px-5">
-          <div class="col-4 box ">Player 1 = X</div>
+          <div class="col-4 box2">Player 1 = X</div>
           <div class="col-4"></div>
-          <div class="col-4 box alt-color">Player 2 = O</div>
+          <div class="col-4 box2">Player 2 = O</div>
         </div>
+
+        <!-- Main grid of elements to click -->
         <div class="row b-3">
           <div class="col-4 box alt-color"></div>
           <div class="col-4 box color"></div>

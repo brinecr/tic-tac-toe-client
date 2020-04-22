@@ -3,11 +3,32 @@ $alt-color: #000000;
 $body-bg-color: $gray-200;
 $font-color: $light;
 
+.title {
+  background-color: $alt-color;
+  color: $font-color;
+  padding-top: 40px;
+  margin-top: -40px;
+}
+
+.topPadding {
+  padding-top: 40px;
+}
+
 .box {
   align-items: center;
   background-color: $secondary;
-  border: 1px solid $white;
+  border: 1px solid $alt-color;
   color: $font-color;
+  display: flex;
+  height: 80px;
+  justify-content: center;
+}
+
+.box2 {
+  align-items: center;
+  background-color: $white;
+  border: 1px solid $alt-color;
+  color: $black;
   display: flex;
   height: 80px;
   justify-content: center;
@@ -16,6 +37,7 @@ $font-color: $light;
 .alt-color {
   background-color: $alt-color;
 }
+
 .b-3 {
-  padding: $spacer !important;
+  padding: $spacer;
 }
