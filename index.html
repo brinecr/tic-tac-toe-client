@@ -75,35 +75,106 @@
         </div>
       </div>
 </span>
+
+<span class="px-5">
+<div class="textbox border border-dark container px-5">
+  <div class="row mx-n5">
+    <div class="col-6 text-right px-5">Hello
+    </div>
+    <div class="col-6 text-left px-5" id='username'>
+    </div>
+  </div>
+</div>
+
+<div class="textbox border border-dark container px-5">
+  <div class="row mx-n5">
+    <div class="col-6 text-right px-5">Games Played:
+    </div>
+    <div class="col-6 text-left px-5" id='games-played'>
+    </div>
+  </div>
+</div>
+
+<div class="textbox border border-dark container px-5">
+  <div class="row mx-n5">
+    <div class="col-6 text-right px-5">Lucky Number:
+    </div>
+    <div class="col-6 text-left px-5" id='lucky-number'>
+    </div>
+  </div>
+</div>
+</span>
       <!-- Create Game button -->
+<span class="px-5">
+<div class="container px-5" id='create-game-button'>
+  <div class="row mx-n5">
+    <div class="col text-center  px-5">
+      <button type="button" class="btn btn-dark btn-lg b-3">Play Game</button>
+    </div>
+  </div>
+</div>
+</span>
 
-        <div class="container px-5" id='create-game-button'>
-          <div class="row mx-n5">
-            <div class="col text-center  px-5">
-        <button type="button" class="btn btn-dark btn b-3">Create Game</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="container px-5" id='create-game-button'>
-          <div class="row mx-n5">
-            <div class="col text-center  px-5">
-            </div>
-          </div>
-        </div>
 
         <!-- Sign-Out Button -->
-        <form id="sign-out">
-        <div class="container px-5" id='sign-out-button'>
-          <div class="row mx-n5">
-            <div class="col text-center px-5">
-        <button type="submit" class="btn btn-outline-dark">Sign-Out</button>
-            </div>
+<span class="px-5">
+  <form class="px-5"id="sign-out">
+    <div class="container px-5" id='sign-out-button'>
+      <div class="row mx-n5">
+        <div class="col text-center px-5">
+          <button type="submit" class="btn btn-outline-dark">Sign-Out</button>
+      </div>
+    </div>
+  </div>
+</span>
+<span class="px-5">
+  <div class="container px-5" id='cancel-game-button'>
+    <div class="row mx-n5">
+      <div class="col text-center px-5">
+        <button id="cancel-game" type="button" class="btn btn-dark">Cancel</button>
+    </div>
+  </div>
+</div>
+</span>
+  </form>
+
+
+<!-- Change Password Button -->
+<span class="px-5">
+  <form class="px-5">
+    <div class="container px-5" >
+      <div class="row mx-n5">
+        <div class="col text-center px-5">
+          <button id='change-password-button' type="button" class="btn btn-dark">Change Password</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</span>
+
+<!-- Change Password Form Screen -->
+<span class="px-5">
+    <div class="container">
+      <div class="row">
+            <form id='change-password'>
+              <h3><small class="text-muted">Change Password</small></h3>
+                            <div class="form-group">
+                <label>Old Password</label>
+                <input type="password" class="form-control" placeholder="Password" name="passwords[old]">
+              </div>
+
+              <div class="form-group">
+                <label>New Password</label>
+                <input type="password" class="form-control" placeholder="Confirm Password" name="passwords[new]">
+              </div>
+              <button type="submit" class="btn btn-dark">Submit</button>
+              <button id="signed-in-show" type="button" class="btn btn-dark">Cancel</button>
+            </form>
           </div>
         </div>
-        </form>
+  </span>
 
-<span id='game'>
+<span class="px-5" id='game'>
       <div class="container text-center ">
         <!-- Player 1 or Player 2 notifier -->
         <div class="row px-5">

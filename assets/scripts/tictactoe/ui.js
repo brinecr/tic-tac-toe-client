@@ -1,69 +1,62 @@
 'use strict'
 
-const indexBookSuccess = function (data) {
-  console.log('indexBookSuccess ran!', data)
+const indexGameSuccess = function (data) {
+  console.log('indexGameSuccess ran!', data)
   $('#messaging').removeClass()
   $('#messaging').addClass('success')
   $('#messaging').text('Successful index!')
-
-  // create a variable to hold all the books:
-  let bookHtml = ''
-
-  // loo[ through the data and create HTML for each book:
-  data.books.forEach(function (book) {
+  let gameHtml = ''
+  data.games.forEach(function (book) {
     const bookSection = (`
-      <h3 class="title">Title: ${book.title}</h3>
-      <h4>Author: ${book.author}</h4>
-      <p>ID: ${book._id}</p>
+      <h3 class="title">Title: ${game.title}</h3>
+      <h4>Author: ${game.author}</h4>
+      <p>ID: ${game._id}</p>
       <br>
       `)
-
-    bookHtml += bookSection
+    gameHtml += gameSection
   })
-
-  // After looping, put all HTML on page:
-  $('#books-display').html(bookHtml)
+  $('#game-display').html(gameHtml)
 }
 
-const indexBookFailure = function (error) {
+const indexGameFailure = function (error) {
   console.log('indexBookFailure ran!', error)
   $('#messaging').removeClass()
   $('#messaging').addClass('failure')
   $('#messaging').text('Failed index!')
 }
 
-const showBookSuccess = function (data) {
+const showGameSuccess = function (data) {
   $('#messaging').removeClass()
   $('#messaging').addClass('success')
   $('#messaging').text('Successful index!')
 
   // build HTML to display one book
-  const bookHtml = (`
-  <h3 class="title">Title: ${data.book.title}</h3>
-  <h4>Author: ${data.book.author}</h4>
-  <p>ID: ${data.book._id}</p>
+  const gameHtml = (`
+  <h3 class="title">Title: ${data.game.id}</h3>
+  <h4>Author: ${data.game.author}</h4>
+  <p>ID: ${data.game.id}</p>
   <br>
   `)
-  $('#books-display').html(bookHtml)
+  $('#books-display').html(gameHtml)
 
   $('form').trigger('reset')
 }
 
-const showBookFailure = function (error) {
+const showGameFailure = function (error) {
   console.log('showBookFailure ran!', error)
   $('#messaging').removeClass()
   $('#messaging').addClass('failure')
   $('#messaging').text('Failed to show!')
 }
 
-const updateBookSuccess = function (data) {
+const updateGameSuccess = function (data) {
   $('#messaging').removeClass()
   $('#messaging').addClass('success')
   $('#messaging').text('Successful update!')
   $('form').trigger('reset')
 }
 
-const updateBookFailure = function (error) {
+const updateGameFailure = function (error) {
   console.log('updateBookFailure ran!', error)
   $('#messaging').removeClass()
   $('#messaging').addClass('failure')
@@ -71,7 +64,7 @@ const updateBookFailure = function (error) {
   $('form').trigger('reset')
 }
 
-const createBookSuccess = function (data) {
+const createGameSuccess = function (data) {
   $('#messaging').removeClass()
   $('#messaging').addClass('success')
   $('#messaging').text('Successful created a book!')
@@ -86,7 +79,7 @@ const createBookSuccess = function (data) {
   $('form').trigger('reset')
 }
 
-const createBookFailure = function (error) {
+const createGameFailure = function (error) {
   console.log('createBookFailure ran!', error)
   $('#messaging').removeClass()
   $('#messaging').addClass('failure')
@@ -95,12 +88,12 @@ const createBookFailure = function (error) {
 }
 
 module.exports = {
-  indexBookSuccess,
-  indexBookFailure,
-  showBookSuccess,
-  showBookFailure,
-  updateBookFailure,
-  updateBookSuccess,
-  createBookSuccess,
-  createBookFailure
+  indexGameSuccess,
+  indexGameFailure,
+  showGameSuccess,
+  showGameFailure,
+  updateGameSuccess,
+  updateGameFailure,
+  createGameSuccess,
+  createGameFailure
 }

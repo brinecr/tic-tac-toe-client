@@ -23,6 +23,10 @@ $font-color: $light;
   display: none;
 }
 
+.textbox {
+  display: none;
+}
+
 #sign-out-button {
   display: none;
 }
@@ -34,6 +38,19 @@ $font-color: $light;
 #game {
   display: none;
 }
+
+#change-password-button {
+  display: none;
+}
+
+#change-password {
+  display: none;
+}
+
+#cancel-game {
+  display: none;
+}
+
 
 .box {
   align-items: center;
