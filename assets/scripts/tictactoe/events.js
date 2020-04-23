@@ -11,6 +11,14 @@ const onIndex = function () {
     .catch(ui.indexGameFailure)
 }
 
+
+const onCreateGameShow = function () {
+  $('#create-game-button').hide()
+  $('#message').hide()
+  $('#game').show()
+  $('form').trigger('reset')
+}
+
 const onShow = function () {
   event.preventDefault()
   console.log(event)
@@ -45,6 +53,7 @@ const onCreate = function () {
 }
 
 module.exports = {
+  onCreateGameShow,
   onIndex,
   onShow,
   onUpdate,

@@ -14,8 +14,9 @@ $font-color: $light;
   padding-top: 40px;
 }
 
-#authenticated {
-  display: none;
+.border {
+  display: block;
+  padding: 20px;
 }
 
 #sign-up {

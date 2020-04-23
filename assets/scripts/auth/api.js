@@ -3,10 +3,6 @@
 const config = require('./../config')
 const store = require('../store')
 
-const createAccountShow = function (data) {
-  return data
-}
-
 const signUp = function (data) {
   return $.ajax({
     url: config.apiUrl + '/sign-up',
@@ -45,7 +41,6 @@ const signOut = function (data) {
 }
 
 module.exports = {
-  createAccountShow,
   signUp,
   signIn,
   changePassword,

@@ -20,52 +20,61 @@
   </div>
   <h1><a class="topPadding">Pad</a></h1>
 
-  <div id="messaging" class="alert alert-dark" role="alert">
-  </div>
+  <div id="message"></div>
 
-      <div class="container">
-        <div class="row" id="unauthenticated">
+
 
 <!-- Sign-In Form -->
-          <form id='sign-in'>
-            <h3><small class="text-muted">Sign-In</small></h3>
-            <div class="form-group ">
-              <label for="credentials[email]">Email address</label>
-              <input type="email" class="form-control " name="credentials[email]" aria-describedby="emailHelp" placeholder="Enter email">
-            </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" placeholder="Password">
-            </div>
-            <button type="submit" class="btn btn-dark">Submit</button>
+<span class='mx-auto'>
+  <div class="container">
+    <div class="row">
+  <form id='sign-in'>
+    <h3><small class="text-muted">Sign-In</small></h3>
+      <div class="form-group">
+        <label>Email address</label>
+          <input type="email" class="form-control " name="credentials[email]" aria-describedby="emailHelp" placeholder="Enter email" name="credentials[email]">
+      </div>
 
-          </form>
-          <form id='create-account-show'>
-              <button type="submit" class="btn btn-dark">Create Account</button>
-          </form>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control" placeholder="Password" name="credentials[password]">
+      </div>
+
+      <button type="submit" class="btn btn-dark">Submit</button>
+
+      <button id="create-account-show" type="button" class="btn btn-dark">Create Account</button>
+  </form>
+</div>
+</div>
+</span>
 
 <!-- Sign-up Form -->
+<span>
+  <div class="container">
+    <div class="row">
           <form id='sign-up'>
             <h3><small class="text-muted">Sign-Up</small></h3>
             <div class="form-group">
-              <label for="credentials[email]">Email address</label>
-              <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
-              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else. Promise!</small>
+              <label>Email address</label>
+              <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email" name="credentials[email]">
+              <small id="emailHelp" class="form-text text-muted ">We'll never share your email with anyone else. Promise!</small>
             </div>
+
             <div class="form-group">
-              <label for="credentials[password]">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+              <label>Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="credentials[password]">
             </div>
+
             <div class="form-group">
-              <label for="credentials[password_confirmation]">Confirm Password</label>
-              <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
+              <label>Confirm Password</label>
+              <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password" name="credentials[password_confirmation]">
             </div>
             <button type="submit" class="btn btn-dark">Submit</button>
-            <button type="submit" class="btn btn-dark">Cancel</button>
+            <button id="sign-in-show" type="button" class="btn btn-dark">Cancel</button>
           </form>
         </div>
       </div>
-
+</span>
       <!-- Create Game button -->
 
         <div class="container px-5" id='create-game-button'>
@@ -76,17 +85,26 @@
           </div>
         </div>
 
-        <!-- Sign-Out Button -->
-        <div class="container px-5" id='sign-out-button'>
+        <div class="container px-5" id='create-game-button'>
           <div class="row mx-n5">
-            <div class="col text-center px-5">
-        <button type="button" class="btn btn-outline-dark">Sign-Out</button>
+            <div class="col text-center  px-5">
             </div>
           </div>
         </div>
 
+        <!-- Sign-Out Button -->
+        <form id="sign-out">
+        <div class="container px-5" id='sign-out-button'>
+          <div class="row mx-n5">
+            <div class="col text-center px-5">
+        <button type="submit" class="btn btn-outline-dark">Sign-Out</button>
+            </div>
+          </div>
+        </div>
+        </form>
 
-      <div class="container text-center " id='game'>
+<span id='game'>
+      <div class="container text-center ">
         <!-- Player 1 or Player 2 notifier -->
         <div class="row px-5">
           <div class="col-4 box2">Player 1 = X</div>
@@ -96,17 +114,18 @@
 
         <!-- Main grid of elements to click -->
         <div class="row b-3">
-          <div class="col-4 box alt-color">X</div>
-          <div class="col-4 box color">O</div>
-          <div class="col-4 box alt-color"></div>
-          <div class="col-4 box color"></div>
-          <div class="col-4 box alt-color"></div>
-          <div class="col-4 box color"></div>
-          <div class="col-4 box alt-color"></div>
-          <div class="col-4 box color"></div>
-          <div class="col-4 box alt-color"></div>
+          <div id="a1" class="col-4 box alt-color">X</div>
+          <div id="a2" class="col-4 box color">O</div>
+          <div id="a3" class="col-4 box alt-color"></div>
+          <div id="b1" class="col-4 box color"></div>
+          <div id="b2" class="col-4 box alt-color"></div>
+          <div id="b3" class="col-4 box color"></div>
+          <div id="c1" class="col-4 box alt-color"></div>
+          <div id="c2" class="col-4 box color"></div>
+          <div id="c3" class="col-4 box alt-color"></div>
         </div>
-
+      </div>
+</span>
 
 </body>
 </html>
