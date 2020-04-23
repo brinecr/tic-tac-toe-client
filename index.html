@@ -20,73 +20,73 @@
   </div>
   <h1><a class="topPadding">Pad</a></h1>
 
-  <div class="alert alert-success" role="alert">
-  A simple success alert—check it out!
-  </div>
-
-  <div class="alert alert-danger" role="alert">
-  A simple danger alert—check it out!
+  <div id="messaging" class="alert alert-dark" role="alert">
   </div>
 
       <div class="container">
-        <div class="row">
+        <div class="row" id="unauthenticated">
 
 <!-- Sign-In Form -->
-          <form id='sign-in '>
+          <form id='sign-in'>
             <h3><small class="text-muted">Sign-In</small></h3>
             <div class="form-group ">
-              <label for="exampleInputEmail1">Email address</label>
-              <input type="email" class="form-control " id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+              <label for="credentials[email]">Email address</label>
+              <input type="email" class="form-control " name="credentials[email]" aria-describedby="emailHelp" placeholder="Enter email">
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+              <input type="password" class="form-control" placeholder="Password">
             </div>
             <button type="submit" class="btn btn-dark">Submit</button>
-            <button type="submit" class="btn btn-dark">Create Account</button>
+
+          </form>
+          <form id='create-account-show'>
+              <button type="submit" class="btn btn-dark">Create Account</button>
           </form>
 
 <!-- Sign-up Form -->
           <form id='sign-up'>
             <h3><small class="text-muted">Sign-Up</small></h3>
             <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else. Promise.</small>
+              <label for="credentials[email]">Email address</label>
+              <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else. Promise!</small>
             </div>
             <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
+              <label for="credentials[password]">Password</label>
               <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
             </div>
             <div class="form-group">
-              <label for="exampleInputPassword1">Confirm Password</label>
+              <label for="credentials[password_confirmation]">Confirm Password</label>
               <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
             </div>
             <button type="submit" class="btn btn-dark">Submit</button>
+            <button type="submit" class="btn btn-dark">Cancel</button>
           </form>
         </div>
       </div>
 
       <!-- Create Game button -->
-      <div class="container px-5">
-        <div class="row mx-n5">
-          <div class="col text-center  px-5">
-      <button type="button" class="btn btn-dark btn b-3">Create Game</button>
+
+        <div class="container px-5" id='create-game-button'>
+          <div class="row mx-n5">
+            <div class="col text-center  px-5">
+        <button type="button" class="btn btn-dark btn b-3">Create Game</button>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Sign-Out Button -->
-      <div class="container px-5">
-        <div class="row mx-n5">
-          <div class="col text-center px-5">
-      <button type="button" class="btn btn-outline-dark">Sign-Out</button>
+        <!-- Sign-Out Button -->
+        <div class="container px-5" id='sign-out-button'>
+          <div class="row mx-n5">
+            <div class="col text-center px-5">
+        <button type="button" class="btn btn-outline-dark">Sign-Out</button>
+            </div>
           </div>
         </div>
-      </div>
 
 
-      <div class="container text-center ">
+      <div class="container text-center " id='game'>
         <!-- Player 1 or Player 2 notifier -->
         <div class="row px-5">
           <div class="col-4 box2">Player 1 = X</div>
@@ -96,8 +96,8 @@
 
         <!-- Main grid of elements to click -->
         <div class="row b-3">
-          <div class="col-4 box alt-color"></div>
-          <div class="col-4 box color"></div>
+          <div class="col-4 box alt-color">X</div>
+          <div class="col-4 box color">O</div>
           <div class="col-4 box alt-color"></div>
           <div class="col-4 box color"></div>
           <div class="col-4 box alt-color"></div>

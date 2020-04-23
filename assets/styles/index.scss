@@ -14,6 +14,26 @@ $font-color: $light;
   padding-top: 40px;
 }
 
+#authenticated {
+  display: none;
+}
+
+#sign-up {
+  display: none;
+}
+
+#sign-out-button {
+  display: none;
+}
+
+#create-game-button {
+  display: none;
+}
+
+#game {
+  display: none;
+}
+
 .box {
   align-items: center;
   background-color: $secondary;
@@ -22,6 +42,7 @@ $font-color: $light;
   display: flex;
   height: 80px;
   justify-content: center;
+  font-size: 60px;
 }
 
 .box2 {
