@@ -13,6 +13,7 @@
     </head>
 
 <body>
+  <!-- Title -->
   <div class="container">
     <div class="row">
       <h2 class="title col-12 bold fixed-top">Tic-Tac-Toe Game</h2>
@@ -22,15 +23,12 @@
 
   <div id="message"></div>
 
-
-
 <!-- Sign-In Form -->
-<span class='mx-auto'>
-  <div class="container">
+  <div class="container sign-in">
     <div class="row">
   <form id='sign-in'>
     <h3><small class="text-muted">Sign-In</small></h3>
-      <div class="form-group">
+      <div class="form-group center">
         <label>Email address</label>
           <input type="email" class="form-control " name="credentials[email]" aria-describedby="emailHelp" placeholder="Enter email" name="credentials[email]">
       </div>
@@ -46,12 +44,12 @@
   </form>
 </div>
 </div>
-</span>
+
 
 <!-- Sign-up Form -->
-<span>
+
   <div class="container">
-    <div class="row">
+    <div class="row sign-up">
           <form id='sign-up'>
             <h3><small class="text-muted">Sign-Up</small></h3>
             <div class="form-group">
@@ -74,92 +72,71 @@
           </form>
         </div>
       </div>
-</span>
 
-<span class="px-5">
-<div class="textbox border border-dark container px-5">
-  <div class="row mx-n5">
-    <div class="col-6 text-right px-5">Hello
-    </div>
-    <div class="col-6 text-left px-5" id='username'>
+<!-- Greeting Text Section -->
+<div class="textbox container">
+  <div class="row">
+    <div class="col-6 text-right">Hello</div>
+    <div class="col-6 text-left" id='username'></div>
+  </div>
+</div>
+
+
+<!-- Games Played Text Section -->
+<div class="textbox container">
+  <div class="row">
+    <div class="col-6 text-right">Games Played:</div>
+    <div class="col-6 text-left" id='games-played'></div>
+  </div>
+</div>
+
+<!-- Lucky Number Text Section -->
+<div class="textbox container">
+  <div class="row">
+    <div class="col-6 text-right">Lucky Number:</div>
+    <div class="col-6 text-left" id='lucky-number'></div>
+  </div>
+</div>
+
+<!-- Create Game button -->
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col text-center">
+      <button type="button" id='create-game-button' class="btn btn-dark btn-lg b-3">Create New Game</button>
     </div>
   </div>
 </div>
 
-<div class="textbox border border-dark container px-5">
-  <div class="row mx-n5">
-    <div class="col-6 text-right px-5">Games Played:
-    </div>
-    <div class="col-6 text-left px-5" id='games-played'>
-    </div>
-  </div>
-</div>
 
-<div class="textbox border border-dark container px-5">
-  <div class="row mx-n5">
-    <div class="col-6 text-right px-5">Lucky Number:
-    </div>
-    <div class="col-6 text-left px-5" id='lucky-number'>
-    </div>
-  </div>
-</div>
-</span>
-      <!-- Create Game button -->
-<span class="px-5">
-<div class="container px-5" id='create-game-button'>
-  <div class="row mx-n5">
-    <div class="col text-center  px-5">
-      <button type="button" class="btn btn-dark btn-lg b-3">Play Game</button>
-    </div>
-  </div>
-</div>
-</span>
-
-
-        <!-- Sign-Out Button -->
-<span class="px-5">
-  <form class="px-5"id="sign-out">
-    <div class="container px-5" id='sign-out-button'>
-      <div class="row mx-n5">
-        <div class="col text-center px-5">
-          <button type="submit" class="btn btn-outline-dark">Sign-Out</button>
+<!-- Continue Game Button -->
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col text-center">
+          <button type="button" id='continue-game-button' class="btn btn-dark btn-lg">Continue Current Game
+          </button>
       </div>
     </div>
   </div>
-</span>
-<span class="px-5">
-  <div class="container px-5" id='cancel-game-button'>
-    <div class="row mx-n5">
-      <div class="col text-center px-5">
-        <button id="cancel-game" type="button" class="btn btn-dark">Cancel</button>
-    </div>
-  </div>
-</div>
-</span>
-  </form>
-
 
 <!-- Change Password Button -->
-<span class="px-5">
-  <form class="px-5">
-    <div class="container px-5" >
-      <div class="row mx-n5">
-        <div class="col text-center px-5">
-          <button id='change-password-button' type="button" class="btn btn-dark">Change Password</button>
-        </div>
+<form>
+  <div class="container" >
+    <div class="row">
+      <div class="col text-center">
+        <button id='change-password-button' type="button" class="btn btn-dark">Change Password</button>
+        <br>
       </div>
     </div>
-  </form>
-</span>
+  </div>
+</form>
 
 <!-- Change Password Form Screen -->
-<span class="px-5">
     <div class="container">
       <div class="row">
             <form id='change-password'>
               <h3><small class="text-muted">Change Password</small></h3>
                             <div class="form-group">
-                <label>Old Password</label>
+                <label>Current Password</label>
                 <input type="password" class="form-control" placeholder="Password" name="passwords[old]">
               </div>
 
@@ -172,31 +149,48 @@
             </form>
           </div>
         </div>
-  </span>
 
-<span class="px-5" id='game'>
-      <div class="container text-center ">
-        <!-- Player 1 or Player 2 notifier -->
-        <div class="row px-5">
-          <div class="col-4 box2">Player 1 = X</div>
-          <div class="col-4"></div>
-          <div class="col-4 box2">Player 2 = O</div>
-        </div>
+<section id='game'>
+  <div class="container text-center justify-content-center">
+<!-- Player 1 or Player 2 notifier -->
+  <div class="row justify-content-center">
+      <div id="whose-turn" class="col-6">Player 1's Turn</div>
+  </div>
 
         <!-- Main grid of elements to click -->
-        <div class="row b-3">
-          <div id="a1" class="col-4 box alt-color">X</div>
-          <div id="a2" class="col-4 box color">O</div>
-          <div id="a3" class="col-4 box alt-color"></div>
-          <div id="b1" class="col-4 box color"></div>
-          <div id="b2" class="col-4 box alt-color"></div>
-          <div id="b3" class="col-4 box color"></div>
-          <div id="c1" class="col-4 box alt-color"></div>
-          <div id="c2" class="col-4 box color"></div>
-          <div id="c3" class="col-4 box alt-color"></div>
+   <div class="row game-board justify-content-center">
+     <div id="a1" class="col-4 box"></div>
+     <div id="a2" class="col-4 box"></div>
+     <div id="a3" class="col-4 box"></div>
+
+     <div id="b1" class="col-4 box"></div>
+     <div id="b2" class="col-4 box"></div>
+     <div id="b3" class="col-4 box"></div>
+
+     <div id="c1" class="col-4 box"></div>
+     <div id="c2" class="col-4 box"></div>
+     <div id="c3" class="col-4 box"></div>
+   </div>
+</section>
+
+<!-- Cancel Game Button -->
+<div class="container" id='cancel-game-button'>
+  <div class="row justify-content-center">
+    <div class="col text-center">
+      <button id="cancel-game" type="button" class="btn btn-dark">Cancel</button>
+    </div>
+  </div>
+</div>
+<!-- Sign-Out Button -->
+  <form id="sign-out">
+    <div class="container" id='sign-out-button'>
+      <div class="row justify-content-center">
+        <div class="col text-center">
+          <button type="submit" class="btn btn-outline-dark">Sign-Out</button>
         </div>
       </div>
-</span>
+    </div>
+  </form>
 
 </body>
 </html>

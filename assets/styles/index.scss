@@ -1,13 +1,28 @@
 @import '~bootstrap/scss/bootstrap';
-$alt-color: #000000;
+$alt-color: #000;
 $body-bg-color: $gray-200;
-$font-color: $light;
+$font-color: #FFF;
 
 .title {
   background-color: $alt-color;
   color: $font-color;
   padding-top: 40px;
   margin-top: -40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-in {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .topPadding {
@@ -19,6 +34,72 @@ $font-color: $light;
   padding: 20px;
 }
 
+.game-board {
+  margin: auto;
+  max-width: 80vw;
+  max-height: 100vh;
+  background: url(public/pulsar.jpg) center;
+  background-size: cover;
+}
+
+.box {
+
+  border-right: 4px solid black;
+  border-bottom: 4px solid black;
+
+  min-height: 20vh;
+  min-width: 20vw;
+
+  color: $font-color;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 12vh;
+  text-shadow: 2px 2px rgba(0, 0, 0, .5);
+
+  cursor: pointer;
+  user-select: none;
+
+  background-color: white;
+
+  &:hover {
+      background: black;
+  }
+  &:nth-child(3n) {
+    border-right: 0;
+  }
+  &:nth-last-child(-1n + 3) {
+    border-bottom: 0;
+  }
+}
+
+.box2 {
+  align-items: center;
+  background-color: $white;
+  color: $black;
+  display: flex;
+  height: 100px;
+  width: 100px;
+  justify-content: center;
+}
+
+.alt-color {
+  background-color: $alt-color;
+}
+
+.alert {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.b-3 {
+  padding: $spacer;
+}
+
 #sign-up {
   display: none;
 }
@@ -28,6 +109,10 @@ $font-color: $light;
 }
 
 #sign-out-button {
+  display: none;
+}
+
+#continue-game-button {
   display: none;
 }
 
@@ -49,34 +134,4 @@ $font-color: $light;
 
 #cancel-game {
   display: none;
-}
-
-
-.box {
-  align-items: center;
-  background-color: $secondary;
-  border: 1px solid $alt-color;
-  color: $font-color;
-  display: flex;
-  height: 80px;
-  justify-content: center;
-  font-size: 60px;
-}
-
-.box2 {
-  align-items: center;
-  background-color: $white;
-  border: 1px solid $alt-color;
-  color: $black;
-  display: flex;
-  height: 80px;
-  justify-content: center;
-}
-
-.alt-color {
-  background-color: $alt-color;
-}
-
-.b-3 {
-  padding: $spacer;
 }

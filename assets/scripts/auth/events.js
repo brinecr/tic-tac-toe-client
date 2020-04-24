@@ -18,12 +18,14 @@ const onChangePasswordButton = function () {
   $('#sign-out-button').show()
   $('#sign-in').hide()
   $('#message').hide()
+  $('#continue-game-button').hide()
   $('#change-password-button').hide()
   $('form').trigger('reset')
 }
 
 const onSignedInShow = function () {
   $('#change-password').hide()
+  $('#continue-game-button').show()
   $('#create-game-button').show()
   $('.textbox').show()
   $('#sign-out-button').show()
@@ -32,9 +34,12 @@ const onSignedInShow = function () {
 }
 
 const onCancelGame = function () {
+  $('#message').hide()
   $('#change-password').hide()
   $('#cancel-game').hide()
+  $('#game').hide()
   $('#create-game-button').show()
+  $('#continue-game-button').show()
   $('.textbox').show()
   $('#sign-out-button').show()
   $('#change-password-button').show()

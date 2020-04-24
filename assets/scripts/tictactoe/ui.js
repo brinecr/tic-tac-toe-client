@@ -6,7 +6,7 @@ const indexGameSuccess = function (data) {
   $('#messaging').addClass('success')
   $('#messaging').text('Successful index!')
   let gameHtml = ''
-  data.games.forEach(function (book) {
+  data.games.forEach(function (game) {
     const bookSection = (`
       <h3 class="title">Title: ${game.title}</h3>
       <h4>Author: ${game.author}</h4>
@@ -87,6 +87,13 @@ const createGameFailure = function (error) {
   $('form').trigger('reset')
 }
 
+const winCheck = function() {
+  if (a1 === true && a2 === true && a3 === true) {
+    $('#messaging').show()
+    $('#messaging').text('You win!')
+  }
+}
+
 module.exports = {
   indexGameSuccess,
   indexGameFailure,
@@ -95,5 +102,6 @@ module.exports = {
   updateGameSuccess,
   updateGameFailure,
   createGameSuccess,
-  createGameFailure
+  createGameFailure,
+  winCheck
 }
