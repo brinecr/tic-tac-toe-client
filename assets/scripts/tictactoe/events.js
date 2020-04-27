@@ -184,7 +184,7 @@ const winCheck = function () {
     // values match diagonal a3 to c1
   } else if (currentGame[6] !== '' && currentGame[4] !== '' && currentGame[2] !== '' && currentGame[6] === currentGame[4] && currentGame[6] === currentGame[2]) {
     ui.win(playerX)
-  } else if (count > 7) {
+  } else if (count > 8) {
     ui.draw()
   }
 }
