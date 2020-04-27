@@ -22,7 +22,6 @@ let currentGame = ['', '', '', '', '', '', '', '', '']
 
 const onIndex = function () {
   event.preventDefault()
-  console.log(event)
   api.index()
     .then(ui.indexGameSuccess)
     .catch(ui.indexGameFailure)

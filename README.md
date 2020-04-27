@@ -11,7 +11,7 @@ A Tic-Tac-Toe Single-Page-Application with multiple views highlighting the basic
 1. Build a dynamic game that allows a user to play tic tac toe against themself
 1. Crafted a readme.md file (this documentation)
 1. Communicate with provided back-end to store the state of the game.
-1. Working independantly to create the game.
+1. Work independantly to create the game.
 
 ## Technologies Used
 
@@ -24,17 +24,37 @@ A Tic-Tac-Toe Single-Page-Application with multiple views highlighting the basic
 7. Problem Solving
 8. Wireframes
 9. User Stories
+10. Markup documentation
 
 ### Development Process and Problem Solving Strategies
 
 The first night of the project I sat down and just thought about it. We had the list of requirements so I knew what needed to be done but the trick is how to get there.
 
-I am personally a very auditory learner and so verbally going over these requirements was one of my first steps.
+The next morning I got up and began work on the documentation regarding the steps I would need to take, in detail, to complete the project as outlined below. Some of it ended up being strech goals I did not get a chance to finish - but it was all in line with the overall idea of the project.
 
-I then sat down and created a document going over the steps I would need to take, in detail to complete the project as outlined below.
+Beyond the prep work getting over difficulties while coding was really a matter of sitting down and figuring things out all the way through. The what I am trying to start with data wise, the end result I am looking for, and then the how to get there. This is all very new (my first real project) and so learning how to make the code do what I want was a major difficulty sometimes.
+
+A few points I sat down and marked out psuedocode before actually working on the functions - or actually outlined in full writing my thoughts so I could make sense of it.
+
+I also was not afraid to break things or tweak my code a little bit to see what that particular change would do. (Being mindful of how to set it back to where it was before however). Sometimes, especially with styling, you have to try out different sizes to see if things would break or not.
+
+### List unsolved problems which would be fixed in future iterations
+
+There is never an end to art. I feel like I could keep working on this project for a very long time adding in new features, updating things, and just making general changes.
+
+On the basic level I feel it has met the specifications required. Some of the additional features I would have liked to have added but did not finish getting to are:
+
+1. I wanted to have multiple backgrounds that switched randomly when a new game was created.
+2. I would have liked to be able to add in an AI functionality so you could not only play against yourself or handing your device to someone else - but an actual computer. I had originally thought of a couple different ways to implement this in my original plans but was unable to.
+3. Different sized grids would have been an interesting prospect I did not have time to implement.
+4. I would have liked to make my code more D.R.Y. (don' repeat yourself) as I feel I did have some replication which I could have cut down on.
+5. I would have liked to implement a way to hop back into a previously started but not finished game. The foundation of this is there but it was not something I was able to get to.
+6. Choosing different icons besides X's and O's was something I had originally wanted to make an option. "Choose your fighter" kind of idea with a grid of icons you could pick when first logging in.
 
 ### Wireframes
 I created my wireframes with the idea of having the mobile client be the focus and using the same material to expand into the website. This would be using the bootstrap tools to make it easily scalable and look good while doing so. The wireframes were the first thing I did in the initial planning for the project and so it has morphed well beyond what they originally laid out.
+
+While these helped I actually found the documentation I wrote up outlining everything in detail to be a much greater help for me overall in the planning process.
 
 <img src="public/wireframe/tictacmockupmobilelanding.png" alt="landing mobile" width=24%>
 <img src="public/wireframe/tictacmockupmobilecreateaccount.png" alt="create account mobile" width=24%>

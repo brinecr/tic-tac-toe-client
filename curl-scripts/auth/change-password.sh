@@ -1,4 +1,4 @@
-curl "https://tic-tac-toe-wdi.herokuapp.com/" \
+curl "https://tic-tac-toe-wdi-production.herokuapp.com" \
   --include \
   --request PATCH \
   --header "Authorization: Token token=${TOKEN}" \

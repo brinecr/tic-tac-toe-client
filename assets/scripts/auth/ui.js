@@ -37,8 +37,6 @@ const signInSuccess = function (data) {
   $('#sign-in').hide()
   $('#change-password-button').show()
   $('form').trigger('reset')
-  console.log(data)
-  // $('games-played-total').html(data.game.id) // <<<<<<<<<<< this line
 }
 
 const signInFailure = function (error) {
@@ -57,6 +55,7 @@ const changePasswordSuccess = function (data) {
   $('#message').addClass('alert alert-success justify-content-center')
   $('form').trigger('reset')
   $('#change-password').hide()
+  $('#stats-button').show()
   $('#create-game-button').show()
   $('.textbox').show()
   $('#sign-out-button').show()

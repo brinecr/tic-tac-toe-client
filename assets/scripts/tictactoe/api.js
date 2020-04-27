@@ -22,16 +22,6 @@ const createGame = function (data) {
     }
   })
 }
-//
-// const showGame = function (id) {
-//   return $.ajax({
-//     url: config.apiUrl + '/games/' + id,
-//     method: 'GET',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     }
-//   })
-// }
 
 const updateGame = function (data) {
   return $.ajax({
@@ -41,13 +31,13 @@ const updateGame = function (data) {
       Authorization: 'Token token=' + store.user.token
     },
     data: {
-      "game": {
-        "cell": {
-          "index": data.index,
-          "value": data.value
-        },
+      'game': {
+        'cell': {
+          'index': data.index,
+          'value': data.value
+        }
       },
-      "over": false
+      'over': false
     }
   })
 }

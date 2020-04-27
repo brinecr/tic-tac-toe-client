@@ -14,6 +14,7 @@ const onCreateAccountShow = function () {
 const onChangePasswordButton = function () {
   $('#change-password').show()
   $('#create-game-button').hide()
+  $('#stats-button').hide()
   $('.textbox').hide()
   $('#sign-out-button').show()
   $('#sign-in').hide()
@@ -26,7 +27,6 @@ const onChangePasswordButton = function () {
 const onSignedInShow = function () {
   $('#stats-button').show()
   $('#change-password').hide()
-  $('#continue-game-button').show()
   $('#create-game-button').show()
   $('.textbox').show()
   $('#sign-out-button').show()

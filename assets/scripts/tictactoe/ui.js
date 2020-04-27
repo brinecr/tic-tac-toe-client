@@ -1,18 +1,17 @@
 'use strict'
-const api = require('./api')
+
 const store = require('../store')
 
 const indexGameSuccess = function (data) {
-    console.log('indexGameSuccess ran!', data)
-    $('#message').removeClass()
-    $('#message').addClass('alert alert-success')
-    $('#message').text('Successfully showed games!')
-    let gameHtml = ''
-    data.games.forEach(function (game) {
-      const gameSection = (`
-        Game ID: ${game.id}
+  $('#message').removeClass()
+  $('#message').addClass('alert alert-success')
+  $('#message').text('Successfully showed games!')
+  let gameHtml = ''
+  data.games.forEach(function (game) {
+    const gameSection = (`
+        <strong>Game ID</strong>: ${game.id}
         <br>
-        Cells:
+        <strong>Cells</strong>:
         <br>
         |${game.cells[0]}-${game.cells[1]}-${game.cells[2]}| <br>
         |${game.cells[3]}-${game.cells[4]}-${game.cells[5]}| <br>
@@ -20,13 +19,13 @@ const indexGameSuccess = function (data) {
         <br>
         <br>
       `)
-      gameHtml += gameSection
-    })
-    $('#games-played-total').show()
-    $('#games-played-total').html(gameHtml)
-  }
+    gameHtml += gameSection
+  })
+  $('#games-played-total').show()
+  $('#games-played-total').html(gameHtml)
+}
 
-const indexGameFailure= function (data) {
+const indexGameFailure = function (error) {
   $('#message').show()
   $('#message').removeClass()
   $('#message').addClass('alert alert-danger')
@@ -72,7 +71,6 @@ const createGameSuccess = function (data) {
   $('#c2').html(' ').css('background-color', 'white')
   $('#c3').html(' ').css('background-color', 'white')
   $('#game-id').html('Game ID is: ' + data.game.id)
-  console.log(data)
 }
 
 const createGameFailure = function (error) {
