@@ -16,6 +16,8 @@ $(() => {
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('submit', authEvents.onSignOut)
 
+  $('#user-stats-button').on('click', tictactoeEvents.onIndex)
+
   // game events
   $('#a1').on('click', tictactoeEvents.onGameClicka1).hover(tictactoeEvents.onHoverIna1, tictactoeEvents.onHoverOuta1)
   $('#a2').on('click', tictactoeEvents.onGameClicka2).hover(tictactoeEvents.onHoverIna2, tictactoeEvents.onHoverOuta2)
@@ -30,9 +32,8 @@ $(() => {
   $('#c3').on('click', tictactoeEvents.onGameClickc3).hover(tictactoeEvents.onHoverInc3, tictactoeEvents.onHoverOutc3)
 
   $('#create-game-button').on('click', tictactoeEvents.onCreateGameShow)
-  $('#continue-game-button').on('click', tictactoeEvents.onContinueGameShow)
 
-  $('#games-show').on('submit', tictactoeEvents.onShow)
-  $('#games-update').on('submit', tictactoeEvents.onUpdateGame)
-  $('#games-create').on('submit', tictactoeEvents.onCreate)
+  // $('#games-show').on('submit', tictactoeEvents.onShow)
+  // $('#games-update').on('submit', tictactoeEvents.onUpdateGame)
+  // $('#games-create').on('submit', tictactoeEvents.onCreate)
 })

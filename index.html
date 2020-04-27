@@ -84,7 +84,7 @@
 <!-- Games Played Text Section -->
 <div class='textbox container'>
   <div class='row mb-1'>
-    <div class='col-6 text-right px-1'>Games Played:</div>
+    <div class='col-6 text-right px-1'>Games Played This Session:</div>
     <div class='col-6 text-left px-1' id='games-played'></div>
   </div>
 </div>
@@ -105,16 +105,6 @@
     </div>
   </div>
 </div>
-
-<!-- Continue Game Button -->
-  <div class='container'>
-    <div class='row justify-content-center'>
-      <div class='col text-center'>
-          <button type='button' id='continue-game-button' class='btn btn-dark btn-lg mb-1'>Continue Current Game
-          </button>
-      </div>
-    </div>
-  </div>
 
 <!-- Change Password Button -->
 <form>
@@ -152,7 +142,8 @@
   <div class='container'>
 <!-- Player 1 or Player 2 notifier -->
   <div class='row justify-content-center'>
-      <div id='whose-turn' class='col-6 col-xl-6 mb-1 text-center'>Player 1's Turn</div>
+      <div id='whose-turn' class='col-3 mb-1 text-center'>Player 1's Turn</div>
+      <div id='game-id' class='col-3 mb-1 text-center'></div>
   </div>
 </div>
 
@@ -179,10 +170,22 @@
 <div class='container' id='cancel-game-button'>
   <div class='row justify-content-center'>
     <div class='col text-center'>
-      <button id='cancel-game' type='button' class='btn btn-dark mb-1 mt-4'>Cancel</button>
+      <button id='cancel-game' type='button' class='btn btn-dark mb-1 mt-4'>Back</button>
     </div>
   </div>
 </div>
+
+<!-- Stats Button -->
+<div class='container' id='stats-button'>
+  <div class='row justify-content-center'>
+    <div class='col text-center'>
+      <button id='user-stats-button' type="button" class="btn btn-dark mb-1" data-toggle="modal" data-target="#exampleModal">
+      Previous Game Information
+      </button>
+      </div>
+    </div>
+</div>
+
 <!-- Sign-Out Button -->
   <form id='sign-out'>
     <div class='container' id='sign-out-button'>
@@ -193,6 +196,35 @@
       </div>
     </div>
   </form>
+
+
+
+<!-- Stats Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="user-stats">Previous Game Results</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+        <div class="modal-body">
+
+        <!-- Games Played Total Text Section -->
+        <div class='textbox container'>
+          <div class='row mb-1'>
+            <div class='col-12 text-left' id='games-played-total'></div>
+          </div>
+        </div>
+
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>

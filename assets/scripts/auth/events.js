@@ -24,6 +24,7 @@ const onChangePasswordButton = function () {
 }
 
 const onSignedInShow = function () {
+  $('#stats-button').show()
   $('#change-password').hide()
   $('#continue-game-button').show()
   $('#create-game-button').show()
@@ -35,12 +36,13 @@ const onSignedInShow = function () {
 }
 
 const onCancelGame = function () {
+  $('#stats-button').show()
   $('#message').hide()
   $('#change-password').hide()
   $('#cancel-game').hide()
   $('#game').hide()
   $('#create-game-button').show()
-  $('#continue-game-button').hide()
+  $('#continue-game-button').show()
   $('.textbox').show()
   $('#sign-out-button').show()
   $('#change-password-button').show()

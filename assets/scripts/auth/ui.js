@@ -29,6 +29,7 @@ const signInSuccess = function (data) {
   $('#message').removeClass()
   $('#message').addClass('alert alert-success')
   $('#games-played').text(0)
+  $('#stats-button').show()
   store.user = data.user
   $('#create-game-button').show()
   $('.textbox').show()
@@ -36,7 +37,8 @@ const signInSuccess = function (data) {
   $('#sign-in').hide()
   $('#change-password-button').show()
   $('form').trigger('reset')
-  console.log(data.user.token)
+  console.log(data)
+  // $('games-played-total').html(data.game.id) // <<<<<<<<<<< this line
 }
 
 const signInFailure = function (error) {
@@ -58,7 +60,6 @@ const changePasswordSuccess = function (data) {
   $('#create-game-button').show()
   $('.textbox').show()
   $('#sign-out-button').show()
-  $('#continue-game-button').show()
   $('#change-password-button').show()
   $('form').trigger('reset')
 }
@@ -73,6 +74,7 @@ const changePasswordFailure = function (error) {
 
 // Sign-Out
 const signOut = function (data) {
+  $('#stats-button').hide()
   $('#message').show()
   $('#message').text('Signed-Out successfully!')
   $('#message').removeClass()
@@ -84,7 +86,6 @@ const signOut = function (data) {
   $('.textbox').hide()
   $('#game').hide()
   $('#change-password').hide()
-  $('#continue-game-button').hide()
   $('#change-password-button').hide()
   $('form').trigger('reset')
   store.user = null
