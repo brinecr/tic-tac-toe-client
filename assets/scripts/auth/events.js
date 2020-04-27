@@ -31,6 +31,7 @@ const onSignedInShow = function () {
   $('#sign-out-button').show()
   $('#change-password-button').show()
   $('form').trigger('reset')
+  $('#message').hide()
 }
 
 const onCancelGame = function () {
@@ -39,7 +40,7 @@ const onCancelGame = function () {
   $('#cancel-game').hide()
   $('#game').hide()
   $('#create-game-button').show()
-  $('#continue-game-button').show()
+  $('#continue-game-button').hide()
   $('.textbox').show()
   $('#sign-out-button').show()
   $('#change-password-button').show()
@@ -56,17 +57,15 @@ const onSignUp = function (event) {
   event.preventDefault()
   const form = event.target
   const formData = getFormFields(form)
-  console.log(formData)
   api.signUp(formData)
     .then(ui.signUpSuccess)
-    .catch(ui.failure)
+    .catch(ui.signUpFailure)
 }
 
 const onSignIn = function (event) {
   event.preventDefault()
   const form = event.target
   const formData = getFormFields(form)
-  console.log(formData)
   api.signIn(formData)
     .then(ui.signInSuccess)
     .catch(ui.signInFailure)
@@ -76,17 +75,14 @@ const onChangePassword = function (event) {
   event.preventDefault()
   const form = event.target
   const formData = getFormFields(form)
-  console.log(formData)
   api.changePassword(formData)
     .then(ui.changePasswordSuccess)
-    .catch(ui.failure)
+    .catch(ui.changePasswordFailure)
 }
 
 const onSignOut = function (event) {
   event.preventDefault()
-  api.signOut()
-    .then(ui.signOutSuccess)
-    .catch(ui.failure)
+  ui.signOut()
 }
 
 module.exports = {

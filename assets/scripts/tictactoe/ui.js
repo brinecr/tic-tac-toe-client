@@ -1,53 +1,27 @@
 'use strict'
 
-const indexGameSuccess = function (data) {
-  console.log('indexGameSuccess ran!', data)
-  $('#messaging').removeClass()
-  $('#messaging').addClass('success')
-  $('#messaging').text('Successful index!')
-  let gameHtml = ''
-  data.games.forEach(function (game) {
-    const bookSection = (`
-      <h3 class="title">Title: ${game.title}</h3>
-      <h4>Author: ${game.author}</h4>
-      <p>ID: ${game._id}</p>
-      <br>
-      `)
-    gameHtml += gameSection
-  })
-  $('#game-display').html(gameHtml)
-}
-
-const indexGameFailure = function (error) {
-  console.log('indexBookFailure ran!', error)
-  $('#messaging').removeClass()
-  $('#messaging').addClass('failure')
-  $('#messaging').text('Failed index!')
-}
-
-const showGameSuccess = function (data) {
-  $('#messaging').removeClass()
-  $('#messaging').addClass('success')
-  $('#messaging').text('Successful index!')
-
-  // build HTML to display one book
-  const gameHtml = (`
-  <h3 class="title">Title: ${data.game.id}</h3>
-  <h4>Author: ${data.game.author}</h4>
-  <p>ID: ${data.game.id}</p>
-  <br>
-  `)
-  $('#books-display').html(gameHtml)
-
-  $('form').trigger('reset')
-}
-
-const showGameFailure = function (error) {
-  console.log('showBookFailure ran!', error)
-  $('#messaging').removeClass()
-  $('#messaging').addClass('failure')
-  $('#messaging').text('Failed to show!')
-}
+// const showGameSuccess = function (data) {
+//   $('#messaging').removeClass()
+//   $('#messaging').addClass('success')
+//   $('#messaging').text('Successful index!')
+//   const gameHtml = (`
+//   <h3 class="title">Game ID: ${data.game.id}</h3>
+//   <h4>Game Pieces: ${data.game.cells}</h4>
+//   <p>Player Name: ${data.game.playerX.email}</p>
+//   <p>Player ID: ${data.game.playerX.id}</p>
+//   <br>
+//   `)
+//   $('#games-display').html(gameHtml)
+//
+//   $('form').trigger('reset')
+// }
+//
+// const showGameFailure = function (error) {
+//   console.log('showBookFailure ran!', error)
+//   $('#messaging').removeClass()
+//   $('#messaging').addClass('failure')
+//   $('#messaging').text('Failed to show!')
+// }
 
 const updateGameSuccess = function (data) {
   $('#messaging').removeClass()
@@ -57,7 +31,7 @@ const updateGameSuccess = function (data) {
 }
 
 const updateGameFailure = function (error) {
-  console.log('updateBookFailure ran!', error)
+  console.log('updateGameFailure ran!', error)
   $('#messaging').removeClass()
   $('#messaging').addClass('failure')
   $('#messaging').text('Failed to update!')
@@ -67,41 +41,78 @@ const updateGameFailure = function (error) {
 const createGameSuccess = function (data) {
   $('#messaging').removeClass()
   $('#messaging').addClass('success')
-  $('#messaging').text('Successful created a book!')
-  const bookHtml = (`
-  <h3 class="title">Title: ${data.book.title}</h3>
+  $('#messaging').text('Successful created a game!')
+  const gameHtml = (`
+  <h3 class="title">Title: ${data.game.title}</h3>
   <h4>Author: ${data.book.author}</h4>
-  <p>ID: ${data.book._id}</p>
+  <p>ID: ${data.game.id}</p>
   <br>
   `)
-  $('#books-display').html(bookHtml)
-
-  $('form').trigger('reset')
+  $('#games-display').html(gameHtml)
 }
 
 const createGameFailure = function (error) {
-  console.log('createBookFailure ran!', error)
+  console.log('createGameFailure ran!', error)
   $('#messaging').removeClass()
-  $('#messaging').addClass('failure')
-  $('#messaging').text('Failed to add book!')
+  $('#messaging').addClass('alert alert-danger')
+  $('#messaging').text('Failed to add game!')
   $('form').trigger('reset')
 }
 
-const winCheck = function() {
-  if (a1 === true && a2 === true && a3 === true) {
-    $('#messaging').show()
-    $('#messaging').text('You win!')
+const continueGameShow = function () {
+  $('#create-game-button').hide()
+  $('#cancel-game').show()
+  $('#continue-game-button').hide()
+  $('#change-password-button').hide()
+  $('#change-password').hide()
+  $('#message').show()
+  $('.textbox').hide()
+  $('#game').show()
+  $('#signed-in-show-button').show()
+  $('form').trigger('reset')
+}
+
+const win = function (playerX, gameOver) {
+  $('#message').show()
+  $('#whose-turn').hide()
+  $('#message').removeClass()
+  $('#message').addClass('alert alert-success')
+  $('#game').hide()
+  if (playerX === false) {
+    $('#message').text('PLAYER X WINS!')
+    gameOver = true
+  } else if (playerX === true) {
+    $('#message').text('PLAYER O WINS!')
+    gameOver = true
   }
 }
 
+const draw = function (gameOver) {
+  $('#message').show()
+  $('#message').text('GAME OVER - DRAW')
+  $('#message').removeClass()
+  $('#message').addClass('alert alert-danger')
+  $('#whose-turn').hide()
+  $('#game').hide()
+  gameOver = true
+}
+
+const invalidMove = function () {
+  $('#message').show()
+  $('#message').text('Invalid move! Please choose a spot not taken already!')
+  $('#message').removeClass()
+  $('#message').addClass('alert alert-danger')
+}
+
 module.exports = {
-  indexGameSuccess,
-  indexGameFailure,
-  showGameSuccess,
-  showGameFailure,
+  // showGameSuccess,
+  // showGameFailure,
   updateGameSuccess,
   updateGameFailure,
   createGameSuccess,
   createGameFailure,
-  winCheck
+  continueGameShow,
+  win,
+  draw,
+  invalidMove
 }

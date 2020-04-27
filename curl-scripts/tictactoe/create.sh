@@ -6,12 +6,13 @@ curl "https://tic-tac-toe-wdi.herokuapp.com/games/" \
 --data '{
     "game": {
       "id": "'"${ID}"'",
-      "cells": "'"${DIRECTOR}"'",
-      "over": "'"${OVER}"'",
+      "cells": ["","","","","","","","",""],
+      "over": false,
       "player_x": {
         "id": "'"${PLAYERID}"'",
         "email": "'"${EMAIL}"'"
       }
+      "player_o": null
     }
   }'
 

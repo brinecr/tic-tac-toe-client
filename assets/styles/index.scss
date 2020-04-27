@@ -20,43 +20,35 @@ $font-color: #FFF;
 }
 
 .sign-up {
-  display: flex;
   justify-content: center;
-  align-items: center;
+  display: flex;
 }
 
-.topPadding {
+.top-padding {
   padding-top: 40px;
-}
-
-.border {
-  display: block;
-  padding: 20px;
 }
 
 .game-board {
   margin: auto;
-  max-width: 80vw;
-  max-height: 100vh;
+  max-height: 75vh;
+  max-width: 75vh;
   background: url(public/pulsar.jpg) center;
   background-size: cover;
 }
 
 .box {
+  border-right: 4px solid $alt-color;
+  border-bottom: 4px solid $alt-color;
 
-  border-right: 4px solid black;
-  border-bottom: 4px solid black;
-
-  min-height: 20vh;
-  min-width: 20vw;
-
-  color: $font-color;
+  height: 20vh;
+  width: 20vh;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  font-size: 12vh;
+  color: $font-color;
+  font-size: 10vh;
   text-shadow: 2px 2px rgba(0, 0, 0, .5);
 
   cursor: pointer;
@@ -65,7 +57,7 @@ $font-color: #FFF;
   background-color: white;
 
   &:hover {
-      background: black;
+    background: rgba(0, 0, 0, .5);
   }
   &:nth-child(3n) {
     border-right: 0;

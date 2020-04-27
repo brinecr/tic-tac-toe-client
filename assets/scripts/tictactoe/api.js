@@ -2,12 +2,6 @@
 
 const config = require('./../config')
 
-const index = function () {
-  return $.ajax({
-    url: config.apiUrl + '/games'
-  })
-}
-
 const createGame = function (data) {
   return $.ajax({
     url: config.apiUrl + '/games/',
@@ -24,14 +18,13 @@ const show = function (id) {
 
 const updateGame = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/games/' + data.book.id,
+    url: config.apiUrl + '/games/' + data.game.id,
     method: 'PATCH',
     data
   })
 }
 
 module.exports = {
-  index,
   show,
   updateGame,
   createGame

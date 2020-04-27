@@ -1,15 +1,7 @@
 'use strict'
 
 const store = require('../store')
-
-const failure = function (error) {
-  $('#message').text('Failed!')
-  $('#message').removeClass()
-  $('#message').addClass('alert alert-danger')
-  console.log(`Failure. Data is: `, error)
-  $('form').trigger('reset')
-}
-
+// Sign-Up
 const signUpSuccess = function (data) {
   $('#message').show()
   $('#message').text('Signed up successfully!')
@@ -17,10 +9,18 @@ const signUpSuccess = function (data) {
   $('#message').addClass('alert alert-success')
   $('#sign-up').hide()
   $('#sign-in').show()
-  console.log(`signUpSuccess ran. Data is: `, data)
   $('form').trigger('reset')
 }
 
+const signUpFailure = function (error) {
+  $('#message').show()
+  $('#message').text(`Failure to Sign-Up! ${error.responseText}`)
+  $('#message').removeClass()
+  $('#message').addClass('alert alert-danger justify-content-center')
+  $('form').trigger('reset')
+}
+
+// Sign-In
 const signInSuccess = function (data) {
   $('#message').show()
   $('#message').text('Signed-In successfully!')
@@ -28,6 +28,7 @@ const signInSuccess = function (data) {
   $('#lucky-number').text(Math.floor(Math.random() * 100))
   $('#message').removeClass()
   $('#message').addClass('alert alert-success')
+  $('#games-played').text(0)
   store.user = data.user
   $('#create-game-button').show()
   $('.textbox').show()
@@ -35,17 +36,18 @@ const signInSuccess = function (data) {
   $('#sign-in').hide()
   $('#change-password-button').show()
   $('form').trigger('reset')
+  console.log(data.user.token)
 }
 
 const signInFailure = function (error) {
   $('#message').show()
-  $('#message').text('Failure to Sign-In!')
+  $('#message').text(`Failure to Sign-In! ${error.statusText}`)
   $('#message').removeClass()
   $('#message').addClass('alert alert-danger justify-content-center')
-  console.log(`Failure. Data is: `, error)
   $('form').trigger('reset')
 }
 
+// Change Password
 const changePasswordSuccess = function (data) {
   $('#message').show()
   $('#message').text('Password changed successfully!')
@@ -61,7 +63,16 @@ const changePasswordSuccess = function (data) {
   $('form').trigger('reset')
 }
 
-const signOutSuccess = function (data) {
+const changePasswordFailure = function (error) {
+  $('#message').show()
+  $('#message').text(`Failure to change password! ${error.statusText}: Invalid Starting Password`)
+  $('#message').removeClass()
+  $('#message').addClass('alert alert-danger justify-content-center')
+  $('form').trigger('reset')
+}
+
+// Sign-Out
+const signOut = function (data) {
   $('#message').show()
   $('#message').text('Signed-Out successfully!')
   $('#message').removeClass()
@@ -81,9 +92,10 @@ const signOutSuccess = function (data) {
 
 module.exports = {
   signUpSuccess,
-  failure,
+  signUpFailure,
   signInSuccess,
   signInFailure,
   changePasswordSuccess,
-  signOutSuccess
+  changePasswordFailure,
+  signOut
 }
