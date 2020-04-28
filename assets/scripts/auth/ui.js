@@ -73,7 +73,6 @@ const changePasswordFailure = function (error) {
 
 // Sign-Out
 const signOutSuccess = function (data) {
-  console.log('signout success!')
   $('#stats-button').hide()
   $('#message').show()
   $('#message').text('Signed-Out successfully!')
@@ -92,7 +91,6 @@ const signOutSuccess = function (data) {
 }
 
 const signOutFailure = function (error) {
-  console.log('sign out failure!')
   $('#message').show()
   $('#message').text(`Failure to Sign-Out! ${error.responseText}`)
   $('#message').removeClass()
