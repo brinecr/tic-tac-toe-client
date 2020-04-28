@@ -376,6 +376,7 @@ const onGameClickc1 = function () {
   event.preventDefault()
   $('#message').hide()
   if (playerX === false && c1 === false) {
+    count = count + 1
     playerX = !playerX
     c1 = true
     gameHtml = (`O`)
