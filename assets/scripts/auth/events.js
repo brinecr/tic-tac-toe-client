@@ -36,6 +36,7 @@ const onSignedInShow = function () {
 }
 
 const onCancelGame = function () {
+  $('#sign-out-button').show()
   $('#stats-button').show()
   $('#message').hide()
   $('#change-password').hide()

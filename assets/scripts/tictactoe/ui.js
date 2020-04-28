@@ -84,6 +84,7 @@ const createGameFailure = function (error) {
 const win = function (playerX) {
   $('#message').show()
   $('#whose-turn').hide()
+  $('#sign-out-button').hide()
   $('#message').removeClass()
   $('#message').addClass('alert alert-success')
   $('#game').hide()
@@ -100,6 +101,7 @@ const draw = function (gameOver) {
   $('#message').removeClass()
   $('#message').addClass('alert alert-danger')
   $('#whose-turn').hide()
+  $('#sign-out-button').hide()
   $('#game').hide()
   gameOver = true
 }
