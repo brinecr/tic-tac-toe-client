@@ -72,7 +72,8 @@ const changePasswordFailure = function (error) {
 }
 
 // Sign-Out
-const signOut = function (data) {
+const signOutSuccess = function (data) {
+  console.log('signout success!')
   $('#stats-button').hide()
   $('#message').show()
   $('#message').text('Signed-Out successfully!')
@@ -90,6 +91,15 @@ const signOut = function (data) {
   store.user = null
 }
 
+const signOutFailure = function (error) {
+  console.log('sign out failure!')
+  $('#message').show()
+  $('#message').text(`Failure to Sign-Out! ${error.responseText}`)
+  $('#message').removeClass()
+  $('#message').addClass('alert alert-danger justify-content-center')
+  $('form').trigger('reset')
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -97,5 +107,6 @@ module.exports = {
   signInFailure,
   changePasswordSuccess,
   changePasswordFailure,
-  signOut
+  signOutSuccess,
+  signOutFailure
 }
