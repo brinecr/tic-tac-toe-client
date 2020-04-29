@@ -26,6 +26,9 @@ A Tic-Tac-Toe Single-Page-Application with multiple views highlighting the basic
 9. User Stories
 10. Markup documentation
 11. Mobile First Design
+12. Use of Grunt Serve and Grunt Deploy
+13. AJAX
+14. GitHub Integration w/ branch control
 
 ### Development Process and Problem Solving Strategies
 
@@ -33,7 +36,7 @@ The first night of the project I sat down and just thought about it. We had the 
 
 The next morning I got up and began work on the documentation regarding the steps I would need to take, in detail, to complete the project as outlined below. Some of it ended up being strech goals I did not get a chance to finish - but it was all in line with the overall idea of the project.
 
-I decided to go about using bootstrap from the get-go so I would not have to duplicate effort fixing how my project looked after I had gotten it working. This also lead me to think about how users would interact with it from the beginning so I kept a mobile-first design plan in my head from the start. 
+I decided to go about using bootstrap from the get-go so I would not have to duplicate effort fixing how my project looked after I had gotten it working. This also lead me to think about how users would interact with it from the beginning so I kept a mobile-first design plan in my head from the start.
 
 Beyond the prep work getting over difficulties while coding was really a matter of sitting down and figuring things out all the way through. The what I am trying to start with data wise, the end result I am looking for, and then the how to get there. This is all very new (my first real project) and so learning how to make the code do what I want was a major difficulty sometimes.
 
