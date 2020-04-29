@@ -1,6 +1,6 @@
 # Tic-Tac-Toe Client
 
-A Tic-Tac-Toe Single-Page-Application with multiple views highlighting the basics of front-end web design and API integration.
+A Tic-Tac-Toe Single-Page-Application with multiple views highlighting the basics of front-end web design and API integration with a focus on mobile and browser use.
 
 ## Goals of the Game/Project
 
@@ -25,6 +25,7 @@ A Tic-Tac-Toe Single-Page-Application with multiple views highlighting the basic
 8. Wireframes
 9. User Stories
 10. Markup documentation
+11. Mobile First Design
 
 ### Development Process and Problem Solving Strategies
 
@@ -32,9 +33,11 @@ The first night of the project I sat down and just thought about it. We had the 
 
 The next morning I got up and began work on the documentation regarding the steps I would need to take, in detail, to complete the project as outlined below. Some of it ended up being strech goals I did not get a chance to finish - but it was all in line with the overall idea of the project.
 
+I decided to go about using bootstrap from the get-go so I would not have to duplicate effort fixing how my project looked after I had gotten it working. This also lead me to think about how users would interact with it from the beginning so I kept a mobile-first design plan in my head from the start. 
+
 Beyond the prep work getting over difficulties while coding was really a matter of sitting down and figuring things out all the way through. The what I am trying to start with data wise, the end result I am looking for, and then the how to get there. This is all very new (my first real project) and so learning how to make the code do what I want was a major difficulty sometimes.
 
-A few points I sat down and marked out psuedocode before actually working on the functions - or actually outlined in full writing my thoughts so I could make sense of it.
+A few points I marked out psuedocode before actually working on the functions - or actually outlined in full writing my thoughts so I could make sense of it.
 
 I also was not afraid to break things or tweak my code a little bit to see what that particular change would do. (Being mindful of how to set it back to where it was before however). Sometimes, especially with styling, you have to try out different sizes to see if things would break or not.
 
