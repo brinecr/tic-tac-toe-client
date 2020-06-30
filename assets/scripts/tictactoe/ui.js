@@ -9,7 +9,7 @@ const indexGameSuccess = function (data) {
   let gameHtml = ''
   data.games.forEach(function (game) {
     const gameSection = (`
-        <strong>Game ID</strong>: ${game.id}
+        <strong>Game ID</strong>: ${game._id}
         <br>
         <strong>Cells</strong>:
         <br>
@@ -70,7 +70,7 @@ const createGameSuccess = function (data) {
   $('#c1').html(' ').css('background-color', 'white')
   $('#c2').html(' ').css('background-color', 'white')
   $('#c3').html(' ').css('background-color', 'white')
-  $('#game-id').html('Game ID is: ' + data.game.id)
+  $('#game-id').html('Game ID is: ' + data.game._id)
 }
 
 const createGameFailure = function (error) {
